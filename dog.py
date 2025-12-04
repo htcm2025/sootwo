@@ -1,8 +1,9 @@
 class Dog:
-    def __init__(self, health_points, weight, attack_power):
+    def __init__(self, health_points, weight, attack_power, speed):
         self.health_points = health_points
         self.weight = weight
         self.attack_power = attack_power
+        self.speed = speed
 
     def is_alive(self):
         return self.health_points > 0
@@ -17,7 +18,7 @@ class Dog:
             target.take_damage(self.attack_power)
 
     def __str__(self):
-        return f"Dog(HP: {self.health_points}, Weight: {self.weight}, Attack: {self.attack_power})"
+        return f"Dog(HP: {self.health_points}, Weight: {self.weight}, Attack: {self.attack_power}, Speed: {self.speed})"
 
     def __repr__(self):
-        return f"Dog(health_points={self.health_points}, weight={self.weight}, attack_power={self.attack_power})"
+        return f"Dog(health_points={self.health_points}, weight={self.weight}, attack_power={self.attack_power}, speed={self.speed})"
